@@ -13,8 +13,6 @@ from sklearn.preprocessing import MinMaxScaler
 
 df = pd.read_csv('sp500_stocks.csv', delimiter=',', usecols=['Date', 'Symbol','Open', 'High', 'Low', 'Close'])
 df = df[df['Symbol'] == 'AAPL']
-#print('Loaded data for HPQ from the folder')
-#print(df)
 
 high_prices = df.loc[:,'High'].to_numpy()
 low_prices = df.loc[:,'Low'].to_numpy()
